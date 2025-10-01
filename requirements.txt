@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+supabase
+openai-whisper
+pydantic
+python-multipart
+transformers
+torch
+python-docx
+reportlab
+python-dotenv
