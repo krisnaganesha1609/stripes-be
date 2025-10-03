@@ -1,25 +1,15 @@
 import os
-import subprocess
+import torch
 
 def detect_device() -> str:
     # Prioritas manual override
     manual = os.getenv("USE_DEVICE")
-    if manual in ["cuda", "vulkan", "cpu"]:
+    if manual in ["cuda", "cpu"]:
         return manual
 
     # Cek CUDA via nvidia-smi
-    try:
-        subprocess.check_output(["nvidia-smi"], stderr=subprocess.DEVNULL)
+    if torch.cuda.is_available():
         return "cuda"
-    except Exception:
-        pass
-
-    # Cek Vulkan (AMD/Intel) via vulkaninfo
-    try:
-        subprocess.check_output(["vulkaninfo"], stderr=subprocess.DEVNULL)
-        return "vulkan"
-    except Exception:
-        pass
 
     # Default fallback
     return "cpu"

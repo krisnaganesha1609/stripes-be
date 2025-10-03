@@ -1,6 +1,6 @@
 import torch
 from transformers import pipeline
-from app.services.supabase_service import add_summary
+from services.supabase_service import add_summary
 
 pipeline = pipeline("summarization", model="google/pegasus-x-large", dtype=torch.bfloat16, device=0)
 

@@ -1,5 +1,5 @@
 from keybert import keyBERT
-from app.services.supabase_service import add_tags
+from services.supabase_service import add_tags
 
 keybert = keyBERT()
 

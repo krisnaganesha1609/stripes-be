@@ -6,6 +6,7 @@ from utils.device_selector import detect_device
 # Load model global supaya nggak re-load setiap request
 # Gunakan small untuk realtime, large untuk batch final
 device = detect_device()
+print(f"[INFO] Using device: {device}")
 model_realtime = whisper.load_model("small", device=device)  
 model_batch = whisper.load_model("large", device=device)
 

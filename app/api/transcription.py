@@ -1,9 +1,9 @@
 from fastapi import APIRouter, UploadFile, File
-from app.services.whisper_service import transcribe_batch
-from app.services.supabase_service import save_transcript
-from app.services.summarization_service import summarize_text
-from app.services.tagging_service import extract_keywords
-from app.models import TranscriptionResponse, TranscriptSegment
+from services.whisper_service import transcribe_batch
+from services.supabase_service import save_transcript
+from services.summarization_service import summarize_text
+from services.tagging_service import extract_keywords
+from models import TranscriptionResponse, TranscriptSegment
 import tempfile
 
 router = APIRouter()

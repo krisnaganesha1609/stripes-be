@@ -54,7 +54,7 @@ Copy and paste the `.env.example` as `.env` and fill the variables. (INTERNAL ON
 
 ## Docker Deploy
 
-This project has 3 docker flavor. Try:
+This project has 2 docker flavor. Try:
 
 ### CPU (default)
 
@@ -68,13 +68,6 @@ This project has 3 docker flavor. Try:
 ```bash
   docker build --target gpu -t stripes .
   docker run --gpus all -p 8000:8000 stripes
-```
-
-### Vulkan (AMD/Intel GPU)
-
-```bash
-  docker build --target vulkan -t stripes .
-  docker run --device /dev/dri -p 8000:8000 stripes
 ```
 
 ## 👨‍💻 Contributors

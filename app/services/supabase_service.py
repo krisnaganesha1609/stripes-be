@@ -1,4 +1,4 @@
-from app.config.config import supabase
+from config.config import supabase
 
 def create_manual_notes(user_id: str, title: str, language: str | None, drive_file_id: str | None, markdown_text: str) -> bool | None:
     try:

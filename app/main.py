@@ -2,8 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 # Import routers
-from app.api import transcription, export
-from app.ws import websocket
+from api import transcription, export
+from ws import websocket
 
 app = FastAPI(
     title="Stripes Backend",
